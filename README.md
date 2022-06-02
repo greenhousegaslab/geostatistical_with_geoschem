@@ -26,6 +26,7 @@ Install guide: https://conda.io/projects/conda/en/latest/user-guide/install/linu
 
 2. build a new python environment and install Octave.
 conda create --yes --name octave
+conda activate octave
 conda install -c conda-forge octave_kernel netcdf
 
 3. Set environment variables:
