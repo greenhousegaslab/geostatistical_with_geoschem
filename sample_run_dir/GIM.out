@@ -1,0 +1,2563 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2021 The MathWorks, Inc.
+             R2021a Update 4 (9.10.0.1710957) 64-bit (glnxa64)
+                                July 1, 2021
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+>> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> Covariance matrix parameters for land
+>>    1.0e+03 *
+
+    0.0006    1.4600    0.0051
+
+>> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> Create the X matrix
+>> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> X has been successfully processed
+>> >> >> >> >> >> >> Set land map and inverse modeling dimensions
+>> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> Create the E and D matrices
+>> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> Create an initial guess for the L-BFGS-B algorithm
+>> >> >> >> >> >> >> >> >> >> >> >> This run is a new run. Setting initial flux estimate equal to prior fluxes.
+>> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> Calculate inv(Q) * X
+>> >> >> >> >> >> >> >> >> >> >> Calculate several matrix products that will be used in the preconditioner
+>> >> >> >> >> >> Calculate inv(sqrtm(Q)) * X
+>> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> Run inversion (optimized with the L-BFGS algorithm)
+>> >> >> >> >> >> >> >> >> >>      Iteration  Func-count   Grad-count         f(x)         Step-size
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+1
+Write fluxes to netcdf file for GEOS-Chem model
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 0
+        2022           6          13          12           9          27
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          13          13          23          16
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs (line 168)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+156364.7499
+Cost function value of L2
+5.2529e-09
+Time elapsed for GEOS-Chem and cost function calculations
+   4.4331e+03
+
+Cost function value
+   1.5636e+05
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.4340e+03
+
+Gradient mean of L1
+-87.7022
+Gradient mean of L2
+2.2983e-17
+         0           1           1              156365    
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99975
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 1
+        2022           6          13          13          23          20
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          13          14          37          15
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+905421236.5983
+Cost function value of L2
+46480.2029
+Time elapsed for GEOS-Chem and cost function calculations
+   4.4380e+03
+
+Cost function value
+   9.0547e+08
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.4389e+03
+
+Gradient mean of L1
+9799.5208
+Gradient mean of L2
+-0.48717
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99997
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 2
+        2022           6          13          14          37          20
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          13          15          49          24
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>sectioningPhase (line 539)
+In fminlbfgs>linesearch (line 511)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+7721017.5129
+Cost function value of L2
+464.802
+Time elapsed for GEOS-Chem and cost function calculations
+   4.3279e+03
+
+Cost function value
+   7.7215e+06
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.3289e+03
+
+Gradient mean of L1
+901.5401
+Gradient mean of L2
+-0.048717
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+1
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 3
+        2022           6          13          15          49          28
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          13          17           0          41
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>sectioningPhase (line 539)
+In fminlbfgs>linesearch (line 511)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+82099.4389
+Cost function value of L2
+4.648
+Time elapsed for GEOS-Chem and cost function calculations
+   4.2755e+03
+
+Cost function value
+   8.2104e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.2765e+03
+
+Gradient mean of L1
+11.1945
+Gradient mean of L2
+-0.0048717
+         1           4           4             82104.1     5.55489e-05
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+1
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 4
+        2022           6          13          17           0          44
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          13          18          13          29
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+79939.6086
+Cost function value of L2
+3.8734
+Time elapsed for GEOS-Chem and cost function calculations
+   4.3674e+03
+
+Cost function value
+   7.9943e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.3684e+03
+
+Gradient mean of L1
+1.3006
+Gradient mean of L2
+-0.0043577
+         2           5           5             79943.5               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+1
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 5
+        2022           6          13          18          13          33
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          13          19          22          49
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+77719.3216
+Cost function value of L2
+3.8254
+Time elapsed for GEOS-Chem and cost function calculations
+   4.1586e+03
+
+Cost function value
+   7.7723e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.1595e+03
+
+Gradient mean of L1
+-4.7947
+Gradient mean of L2
+-0.0040044
+         3           6           6             77723.1               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+1
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 6
+        2022           6          13          19          22          52
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          13          20          30          48
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+72722.3437
+Cost function value of L2
+6.7857
+Time elapsed for GEOS-Chem and cost function calculations
+   4.0783e+03
+
+Cost function value
+   7.2729e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.0792e+03
+
+Gradient mean of L1
+-11.776
+Gradient mean of L2
+-0.0035104
+         4           7           7             72729.1               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+1
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 7
+        2022           6          13          20          30          52
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          13          21          42          50
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+67978.2486
+Cost function value of L2
+15.3782
+Time elapsed for GEOS-Chem and cost function calculations
+   4.3210e+03
+
+Cost function value
+   6.7994e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.3219e+03
+
+Gradient mean of L1
+-10.1967
+Gradient mean of L2
+-0.003495
+         5           8           8             67993.6               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+1
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 8
+        2022           6          13          21          42          54
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          13          22          55          38
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+62425.3169
+Cost function value of L2
+35.3314
+Time elapsed for GEOS-Chem and cost function calculations
+   4.3667e+03
+
+Cost function value
+   6.2461e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.3676e+03
+
+Gradient mean of L1
+-6.5476
+Gradient mean of L2
+-0.0038188
+         6           9           9             62460.6               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+1
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 9
+        2022           6          13          22          55          42
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          14           0           9          42
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+58041.0796
+Cost function value of L2
+67.0551
+Time elapsed for GEOS-Chem and cost function calculations
+   4.4428e+03
+
+Cost function value
+   5.8108e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.4437e+03
+
+Gradient mean of L1
+1.4661
+Gradient mean of L2
+-0.0043094
+         7          10          10             58108.1               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+1
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 10
+        2022           6          14           0           9          45
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          14           1          23           2
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+56049.3727
+Cost function value of L2
+88.16
+Time elapsed for GEOS-Chem and cost function calculations
+   4.3993e+03
+
+Cost function value
+   5.6138e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.4003e+03
+
+Gradient mean of L1
+3.7558
+Gradient mean of L2
+-0.0046181
+         8          11          11             56137.5               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99999
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 11
+        2022           6          14           1          23           6
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          14           2          35          56
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+54518.6806
+Cost function value of L2
+108.0727
+Time elapsed for GEOS-Chem and cost function calculations
+   4.3726e+03
+
+Cost function value
+   5.4627e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.3735e+03
+
+Gradient mean of L1
+2.2009
+Gradient mean of L2
+-0.0048942
+         9          12          12             54626.8               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99999
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 12
+        2022           6          14           2          36           0
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          14           3          48          29
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+53551.2949
+Cost function value of L2
+124.2926
+Time elapsed for GEOS-Chem and cost function calculations
+   4.3520e+03
+
+Cost function value
+   5.3676e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.3529e+03
+
+Gradient mean of L1
+0.21857
+Gradient mean of L2
+-0.0050869
+        10          13          13             53675.6               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99999
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 13
+        2022           6          14           3          48          33
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          14           5           0          18
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+52755.5289
+Cost function value of L2
+140.8644
+Time elapsed for GEOS-Chem and cost function calculations
+   4.3081e+03
+
+Cost function value
+   5.2896e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.3090e+03
+
+Gradient mean of L1
+-1.6827
+Gradient mean of L2
+-0.0052647
+        11          14          14             52896.4               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99999
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 14
+        2022           6          14           5           0          22
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          14           6          10          39
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+51963.0506
+Cost function value of L2
+161.4548
+Time elapsed for GEOS-Chem and cost function calculations
+   4.2201e+03
+
+Cost function value
+   5.2125e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.2210e+03
+
+Gradient mean of L1
+-2.5176
+Gradient mean of L2
+-0.0054562
+        12          15          15             52124.5               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99998
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 15
+        2022           6          14           6          10          43
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          14           7          20          25
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+50902.4892
+Cost function value of L2
+193.6219
+Time elapsed for GEOS-Chem and cost function calculations
+   4.1845e+03
+
+Cost function value
+   5.1096e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.1854e+03
+
+Gradient mean of L1
+-1.9417
+Gradient mean of L2
+-0.0055888
+        13          16          16             51096.1               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99998
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 16
+        2022           6          14           7          20          29
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          14           8          29          28
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+49462.1085
+Cost function value of L2
+255.0428
+Time elapsed for GEOS-Chem and cost function calculations
+   4.1426e+03
+
+Cost function value
+   4.9717e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.1434e+03
+
+Gradient mean of L1
+0.29272
+Gradient mean of L2
+-0.0056727
+        14          17          17             49717.2               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99997
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 17
+        2022           6          14           8          29          32
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          14           9          34          28
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+48551.8068
+Cost function value of L2
+306.2149
+Time elapsed for GEOS-Chem and cost function calculations
+   3.8985e+03
+
+Cost function value
+   4.8858e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   3.8994e+03
+
+Gradient mean of L1
+0.79356
+Gradient mean of L2
+-0.0054733
+        15          18          18               48858               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99997
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 18
+        2022           6          14           9          34          32
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          14          10          46          30
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+47734.1782
+Cost function value of L2
+352.6593
+Time elapsed for GEOS-Chem and cost function calculations
+   4.3211e+03
+
+Cost function value
+   4.8087e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.3220e+03
+
+Gradient mean of L1
+1.2485
+Gradient mean of L2
+-0.0053997
+        16          19          19             48086.8               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99995
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 19
+        2022           6          14          10          46          34
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          14          11          59          23
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+46545.1817
+Cost function value of L2
+445.8982
+Time elapsed for GEOS-Chem and cost function calculations
+   4.3718e+03
+
+Cost function value
+   4.6991e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.3726e+03
+
+Gradient mean of L1
+-0.17615
+Gradient mean of L2
+-0.0053039
+        17          20          20             46991.1               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99994
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 20
+        2022           6          14          11          59          27
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          14          13          10          49
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+45750.3081
+Cost function value of L2
+533.2454
+Time elapsed for GEOS-Chem and cost function calculations
+   4.2854e+03
+
+Cost function value
+   4.6284e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.2864e+03
+
+Gradient mean of L1
+0.20258
+Gradient mean of L2
+-0.0054851
+        18          21          21             46283.6               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99993
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 21
+        2022           6          14          13          10          54
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          14          14          21          49
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+44957.4905
+Cost function value of L2
+647.797
+Time elapsed for GEOS-Chem and cost function calculations
+   4.2583e+03
+
+Cost function value
+   4.5605e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.2593e+03
+
+Gradient mean of L1
+-1.4498
+Gradient mean of L2
+-0.0054233
+        19          22          22             45605.3               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99992
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 22
+        2022           6          14          14          21          53
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          14          15          29          55
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+44366.0203
+Cost function value of L2
+712.428
+Time elapsed for GEOS-Chem and cost function calculations
+   4.0846e+03
+
+Cost function value
+   4.5078e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.0854e+03
+
+Gradient mean of L1
+-1.2742
+Gradient mean of L2
+-0.0055556
+        20          23          23             45078.4               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99991
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 23
+        2022           6          14          15          29          58
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          14          16          46          39
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+43783.41
+Cost function value of L2
+784.2203
+Time elapsed for GEOS-Chem and cost function calculations
+   4.6030e+03
+
+Cost function value
+   4.4568e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.6038e+03
+
+Gradient mean of L1
+0.15249
+Gradient mean of L2
+-0.0056227
+        21          24          24             44567.6               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.9999
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 24
+        2022           6          14          16          46          43
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          14          18           6          52
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+43432.2735
+Cost function value of L2
+839.5172
+Time elapsed for GEOS-Chem and cost function calculations
+   4.8118e+03
+
+Cost function value
+   4.4272e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.8127e+03
+
+Gradient mean of L1
+0.41302
+Gradient mean of L2
+-0.0055457
+        22          25          25             44271.8               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99989
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 25
+        2022           6          14          18           6          56
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          14          19          27          38
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+42939.6258
+Cost function value of L2
+929.7504
+Time elapsed for GEOS-Chem and cost function calculations
+   4.8449e+03
+
+Cost function value
+   4.3869e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.8458e+03
+
+Gradient mean of L1
+2.1575
+Gradient mean of L2
+-0.005508
+        23          26          26             43869.4               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99987
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 26
+        2022           6          14          19          27          42
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          14          20          47          58
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+42358.2917
+Cost function value of L2
+1098.5781
+Time elapsed for GEOS-Chem and cost function calculations
+   4.8192e+03
+
+Cost function value
+   4.3457e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.8202e+03
+
+Gradient mean of L1
+-0.18107
+Gradient mean of L2
+-0.0051943
+        24          27          27             43456.9               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99987
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 27
+        2022           6          14          20          48           2
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          14          22           8          51
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+42108.1442
+Cost function value of L2
+1143.4776
+Time elapsed for GEOS-Chem and cost function calculations
+   4.8521e+03
+
+Cost function value
+   4.3252e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.8530e+03
+
+Gradient mean of L1
+1.4384
+Gradient mean of L2
+-0.0052588
+        25          28          28             43251.6               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99987
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 28
+        2022           6          14          22           8          55
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          14          23          28          44
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+41940.4307
+Cost function value of L2
+1142.064
+Time elapsed for GEOS-Chem and cost function calculations
+   4.7913e+03
+
+Cost function value
+   4.3082e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.7922e+03
+
+Gradient mean of L1
+0.15816
+Gradient mean of L2
+-0.0052665
+        26          29          29             43082.5               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99987
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 29
+        2022           6          14          23          28          48
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          15           0          43          37
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+41781.2918
+Cost function value of L2
+1157.0317
+Time elapsed for GEOS-Chem and cost function calculations
+   4.4919e+03
+
+Cost function value
+   4.2938e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.4928e+03
+
+Gradient mean of L1
+-0.98798
+Gradient mean of L2
+-0.0053245
+        27          30          30             42938.3               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99986
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 30
+        2022           6          15           0          43          41
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          15           1          51          52
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+41657.2954
+Cost function value of L2
+1185.6224
+Time elapsed for GEOS-Chem and cost function calculations
+   4.0936e+03
+
+Cost function value
+   4.2843e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.0945e+03
+
+Gradient mean of L1
+-1.0113
+Gradient mean of L2
+-0.005371
+        28          31          31             42842.9               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99985
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 31
+        2022           6          15           1          51          56
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          15           3           0          45
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+41259.9429
+Cost function value of L2
+1285.7878
+Time elapsed for GEOS-Chem and cost function calculations
+   4.1324e+03
+
+Cost function value
+   4.2546e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.1333e+03
+
+Gradient mean of L1
+-2.3317
+Gradient mean of L2
+-0.0052108
+        29          32          32             42545.7               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99984
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 32
+        2022           6          15           3           0          49
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          15           4           9          14
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+40802.7774
+Cost function value of L2
+1465.2152
+Time elapsed for GEOS-Chem and cost function calculations
+   4.1077e+03
+
+Cost function value
+   4.2268e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.1086e+03
+
+Gradient mean of L1
+0.95334
+Gradient mean of L2
+-0.0052474
+        30          33          33               42268               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99984
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 33
+        2022           6          15           4           9          18
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          15           5          17           3
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+40668.785
+Cost function value of L2
+1460.3466
+Time elapsed for GEOS-Chem and cost function calculations
+   4.0684e+03
+
+Cost function value
+   4.2129e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.0693e+03
+
+Gradient mean of L1
+0.60474
+Gradient mean of L2
+-0.0051371
+        31          34          34             42129.1               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99983
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 34
+        2022           6          15           5          17           7
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          15           6          24          26
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+40411.2061
+Cost function value of L2
+1537.2019
+Time elapsed for GEOS-Chem and cost function calculations
+   4.0413e+03
+
+Cost function value
+   4.1948e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.0421e+03
+
+Gradient mean of L1
+0.09034
+Gradient mean of L2
+-0.0050409
+        32          35          35             41948.4               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99983
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 35
+        2022           6          15           6          24          29
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          15           7          32          15
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+40207.7844
+Cost function value of L2
+1560.6518
+Time elapsed for GEOS-Chem and cost function calculations
+   4.0685e+03
+
+Cost function value
+   4.1768e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.0693e+03
+
+Gradient mean of L1
+-0.12679
+Gradient mean of L2
+-0.0048699
+        33          36          36             41768.4               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99981
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 36
+        2022           6          15           7          32          19
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          15           8          39          25
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+39789.4599
+Cost function value of L2
+1783.0614
+Time elapsed for GEOS-Chem and cost function calculations
+   4.0287e+03
+
+Cost function value
+   4.1573e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.0295e+03
+
+Gradient mean of L1
+-0.57009
+Gradient mean of L2
+-0.0047599
+        34          37          37             41572.5               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.9998
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 37
+        2022           6          15           8          39          29
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          15           9          46          11
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+39459.8478
+Cost function value of L2
+1869.2573
+Time elapsed for GEOS-Chem and cost function calculations
+   4.0052e+03
+
+Cost function value
+   4.1329e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.0061e+03
+
+Gradient mean of L1
+-0.52704
+Gradient mean of L2
+-0.0047966
+        35          38          38             41329.1               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99979
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 38
+        2022           6          15           9          46          15
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          15          10          53          38
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+39289.6409
+Cost function value of L2
+1887.5526
+Time elapsed for GEOS-Chem and cost function calculations
+   4.0454e+03
+
+Cost function value
+   4.1177e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.0462e+03
+
+Gradient mean of L1
+0.049186
+Gradient mean of L2
+-0.0047957
+        36          39          39             41177.2               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99979
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 39
+        2022           6          15          10          53          41
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          15          12           1          54
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+39152.9649
+Cost function value of L2
+1925.9627
+Time elapsed for GEOS-Chem and cost function calculations
+   4.0948e+03
+
+Cost function value
+   4.1079e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.0958e+03
+
+Gradient mean of L1
+0.30432
+Gradient mean of L2
+-0.0048093
+        37          40          40             41078.9               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99978
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 40
+        2022           6          15          12           1          57
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          15          13          11          23
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+38916.8416
+Cost function value of L2
+1995.7747
+Time elapsed for GEOS-Chem and cost function calculations
+   4.1681e+03
+
+Cost function value
+   4.0913e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.1700e+03
+
+Gradient mean of L1
+0.4533
+Gradient mean of L2
+-0.0047887
+        38          41          41             40912.6               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99976
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 41
+        2022           6          15          13          11          28
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          15          14          20          57
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+38470.5726
+Cost function value of L2
+2167.7313
+Time elapsed for GEOS-Chem and cost function calculations
+   4.1720e+03
+
+Cost function value
+   4.0638e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.1728e+03
+
+Gradient mean of L1
+0.60578
+Gradient mean of L2
+-0.0047528
+        39          42          42             40638.3               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99971
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 42
+        2022           6          15          14          21           1
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          15          15          32          15
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+39070.0176
+Cost function value of L2
+2745.6328
+Time elapsed for GEOS-Chem and cost function calculations
+   4.2768e+03
+
+Cost function value
+   4.1816e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.2777e+03
+
+Gradient mean of L1
+-4.0297
+Gradient mean of L2
+-0.0042173
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99975
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 43
+        2022           6          15          15          32          18
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          15          16          43          41
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>sectioningPhase (line 539)
+In fminlbfgs>linesearch (line 511)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+38294.477
+Cost function value of L2
+2269.6918
+Time elapsed for GEOS-Chem and cost function calculations
+   4.2852e+03
+
+Cost function value
+   4.0564e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.2861e+03
+
+Gradient mean of L1
+-0.27483
+Gradient mean of L2
+-0.0046507
+        40          44          44             40564.2        0.190571
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99974
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 44
+        2022           6          15          16          43          45
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          15          17          56           7
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+38017.0073
+Cost function value of L2
+2394.3813
+Time elapsed for GEOS-Chem and cost function calculations
+   4.3451e+03
+
+Cost function value
+   4.0411e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.3460e+03
+
+Gradient mean of L1
+-0.14831
+Gradient mean of L2
+-0.0046402
+        41          45          45             40411.4               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99973
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 45
+        2022           6          15          17          56          11
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          15          19           7          31
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+37780.7249
+Cost function value of L2
+2501.4713
+Time elapsed for GEOS-Chem and cost function calculations
+   4.2830e+03
+
+Cost function value
+   4.0282e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.2839e+03
+
+Gradient mean of L1
+0.10224
+Gradient mean of L2
+-0.0045768
+        42          46          46             40282.2               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99971
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 46
+        2022           6          15          19           7          35
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          15          20          13          24
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+37484.6388
+Cost function value of L2
+2643.9665
+Time elapsed for GEOS-Chem and cost function calculations
+   3.9513e+03
+
+Cost function value
+   4.0129e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   3.9521e+03
+
+Gradient mean of L1
+0.0027885
+Gradient mean of L2
+-0.004435
+        43          47          47             40128.6               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99969
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 47
+        2022           6          15          20          13          27
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          15          21          20          36
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+37183.1618
+Cost function value of L2
+2800.2476
+Time elapsed for GEOS-Chem and cost function calculations
+   4.0309e+03
+
+Cost function value
+   3.9983e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.0318e+03
+
+Gradient mean of L1
+0.12974
+Gradient mean of L2
+-0.0044545
+        44          48          48             39983.4               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99968
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 48
+        2022           6          15          21          20          39
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          15          22          29          20
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+36981.7171
+Cost function value of L2
+2843.5544
+Time elapsed for GEOS-Chem and cost function calculations
+   4.1234e+03
+
+Cost function value
+   3.9825e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.1242e+03
+
+Gradient mean of L1
+-0.1085
+Gradient mean of L2
+-0.0043289
+        45          49          49             39825.3               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99967
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 49
+        2022           6          15          22          29          24
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          15          23          37          20
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+36871.4651
+Cost function value of L2
+2848.6698
+Time elapsed for GEOS-Chem and cost function calculations
+   4.0789e+03
+
+Cost function value
+   3.9720e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.0798e+03
+
+Gradient mean of L1
+0.3456
+Gradient mean of L2
+-0.0042844
+        46          50          50             39720.1               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99967
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 50
+        2022           6          15          23          37          24
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          16           0          45          47
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+36847.6884
+Cost function value of L2
+2871.2084
+Time elapsed for GEOS-Chem and cost function calculations
+   4.1056e+03
+
+Cost function value
+   3.9719e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.1065e+03
+
+Gradient mean of L1
+-1.4331
+Gradient mean of L2
+-0.0041275
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99967
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 51
+        2022           6          16           0          45          50
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          16           1          52          31
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>sectioningPhase (line 539)
+In fminlbfgs>linesearch (line 511)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+36838.4719
+Cost function value of L2
+2859.8468
+Time elapsed for GEOS-Chem and cost function calculations
+   4.0032e+03
+
+Cost function value
+   3.9698e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   4.0041e+03
+
+Gradient mean of L1
+-0.55447
+Gradient mean of L2
+-0.004205
+        47          52          52             39698.3        0.506184
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99966
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 52
+        2022           6          16           1          52          35
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          16           2          58          55
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+36795.9515
+Cost function value of L2
+2871.8836
+Time elapsed for GEOS-Chem and cost function calculations
+   3.9831e+03
+
+Cost function value
+   3.9668e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   3.9840e+03
+
+Gradient mean of L1
+-0.19519
+Gradient mean of L2
+-0.0042092
+        48          53          53             39667.8               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99966
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 53
+        2022           6          16           2          58          59
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          16           4           5           5
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+36733.6545
+Cost function value of L2
+2896.7667
+Time elapsed for GEOS-Chem and cost function calculations
+   3.9688e+03
+
+Cost function value
+   3.9630e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   3.9697e+03
+
+Gradient mean of L1
+0.06494
+Gradient mean of L2
+-0.0042023
+        49          54          54             39630.4               1
+Calculate the cost and (possibly) gradient functions
+Estimate the drift coefficients (beta)
+Estimated drift coefficients
+0.99965
+Write fluxes to netcdf file for GEOS-Chem model
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+mv: cannot stat '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_oco2.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_insitu.csv': No such file or directory
+rm: cannot remove '/scratch4/smill191/smiller/geoschem_adjoint_co2/LNLG_2021/residuals_situ_identifier.csv': No such file or directory
+GEOS-Chem launched. Current iteration: 54
+        2022           6          16           4           5           9
+
+GEOS-Chem model finished running. Continue calculating cost function.
+        2022           6          16           5          11          26
+
+[Warning: File type 'GEOS-CHEM GDT File: Final gradient values' not recognised;
+attempting to parse.] 
+[> In readBPCHSingle (line 133)
+In cost_gradient_fun (line 260)
+In @(shat)cost_gradient_fun(X,A,B,Einv,Dinv,Dinv1,CD,CE,shat,landmap,yr,geosdir,fluxpath,ocean)
+In fminlbfgs>gradient_function (line 750)
+In fminlbfgs>bracketingPhase (line 628)
+In fminlbfgs>linesearch (line 506)
+In fminlbfgs (line 216)] 
+Scanning tracer blocks to determine entry size.
+Data scanning complete. Retrieving datablocks...
+Cost function value of L1
+36662.0805
+Cost function value of L2
+2927.0917
+Time elapsed for GEOS-Chem and cost function calculations
+   3.9795e+03
+
+Cost function value
+   3.9589e+04
+
+Calculating the gradient
+Time elapsed for gradient calculations
+   3.9804e+03
+
+Gradient mean of L1
+0.10417
+Gradient mean of L2
+-0.0041793
+    Optimizer Results
+        Algorithm Used: limited memory BFGS (L-BFGS)
+        Exit message : Number of iterations exceeded options.MaxIter or number of function evaluations exceeded options.FunEvals.
+        iterations : 50
+        Function Count : 55
+        Minimum found : 39589.1723
+        Intern Time : 8.7775 seconds
+        Total Time : 234123.3491 seconds
+MATLAB has lost its connection to the license server.
+MATLAB will make 9 more reconnection attempt(s) and then exit. Any unsaved changes will be lost.
+
+
+>> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> Writing outputs to file
+>> >> >> >> Outputs written to file
+>> /scratch4/smill191/smiller/outputs/OCO2_MIP/fluxes_LNLG_2021/fluxes_LBFGS.csv
+>> >> >> >> >> 

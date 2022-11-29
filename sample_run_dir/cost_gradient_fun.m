@@ -215,7 +215,6 @@ function [ f,g ] = cost_gradient_fun( X, A, B, Einv, Dinv, Dinv1, CD, CE, shat, 
 	disp('GEOS-Chem model finished running. Continue calculating cost function.')
         disp(fix(clock))
 
-
 %-----------------------------------------------------%
 % OPTION 2: Launch GEOS-Chem as a separate slurm job. %
 %-----------------------------------------------------%
@@ -321,7 +320,7 @@ if ( nargout > 1 );
 % Calculate the observation component of the gradient  %
 %------------------------------------------------------%
     
-	L1 = -adj;
+	L1 = -adj; %to match how Scot builds L1 
     	% (as in https://github.com/greenhousegaslab/geostatistical_inverse_modeling/blob/master/cost_gradient_fun_transform.m)
     
     	% Multiply the variable "L1" by chol(Q)

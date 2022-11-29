@@ -1,0 +1,99 @@
+#==============================================================================
+# tracerinfo.dat: Created by GEOS-CHEM at 2022/08/30 15:31
+#
+# ****** CUSTOMIZED FOR CO2 SIMULATION *****
+#
+# This file contains name weight and index information about GEOS-CHEM
+# tracers.  It is read by routine "ctm_tracerinfo.pro" of the GAMAP package.
+#
+# File Format:
+# -----------------------------------------------------------------------------
+# NAME     (A8   )  Tracer name (up to 8 chars)
+#  --      (1X   )  1-character spacer
+# FULLNAME (A30  )  Full tracer name (up to 30 chars)
+# MOLWT    (E10.0)  Molecular weight (kg/mole)
+# C        (I3   )  For HC's: # moles C/moles tracer; otherwise set=1
+# TRACER   (I9   )  Tracer number (up to 9 digits)
+# SCALE    (E10.3)  Standard scale factor to convert to unit given below
+#  --      (1X   )  1-character spacer
+# UNIT     (A40  )  Unit string
+#
+#==============================================================================
+# GEOS-CHEM tracers [ppbv]
+#==============================================================================
+CO2      CO2 tracer                     4.400E-02  1        1 1.000E+09 ppbv
+#==============================================================================
+# GEOS-CHEM tracers [molec/cm2/s]
+#==============================================================================
+CO2      CO2 tracer                     4.400E-02  1     1001 1.000E+00 molec/cm2/s
+#==============================================================================
+# GEOS-CHEM tracers [molec/cm2]
+#==============================================================================
+CO2      CO2 tracer                     4.400E-02  1     2001 1.000E+00 molec/cm2
+#==============================================================================
+# GEOS-CHEM tracers [kg/s]
+#==============================================================================
+CO2      CO2 tracer                     4.400E-02  1     3001 1.000E+00 kg/s
+#==============================================================================
+# GEOS-CHEM tracers [kg]
+#==============================================================================
+CO2      CO2 tracer                     4.400E-02  1     4001 1.000E+00 kg
+#==============================================================================
+# ND04 diagnostic quantities
+#==============================================================================
+CO2ff    CO2 fossil fuel emiss          1.200E-02  1    40001 1.000E+00 atoms C/cm2/s
+CO2ocn   CO2 ocean exchange             1.200E-02  1    40002 1.000E+00 atoms C/cm2/s
+CO2bal   CO2 balanced biosphere         1.200E-02  1    40003 1.000E+00 atoms C/cm2/s
+CO2bb    CO2 biomass burning emiss      1.200E-02  1    40004 1.000E+00 atoms C/cm2/s
+CO2bf    CO2 biofuel emissions          1.200E-02  1    40005 1.000E+00 atoms C/cm2/s
+CO2nte   CO2 net terr exchange          1.200E-02  1    40006 1.000E+00 atoms C/cm2/s
+CO2shp   CO2 ship emissions             1.200E-02  1    40007 1.000E+00 atoms C/cm2/s
+CO2pln   CO2 aircraft emissions         1.200E-02  1    40008 1.000E+00 atoms C/cm2/s
+CO2che   CO2 chemical oxidation         1.200E-02  1    40009 1.000E+00 atoms C/cm2/s
+CO2sur   CO2 chem surf correction       1.200E-02  1    40010 1.000E+00 atoms C/cm2/s
+#==============================================================================
+# ND29 diagnostic quantities
+#==============================================================================
+COanth   Anthropogenic CO               2.800E-02  1    20001 1.000E+00 molec/cm2/s
+CObb     Biomass CO                     2.800E-02  1    20002 1.000E+00 molec/cm2/s
+CObf     Biofuel CO                     2.800E-02  1    20003 1.000E+00 molec/cm2/s
+COmeth   CO from methanol               2.800E-02  1    20004 1.000E+00 molec/cm2/s
+COmono   CO from monoterpenes           2.800E-02  1    20005 1.000E+00 molec/cm2/s
+#==============================================================================
+# ND31 diagnostic quantities
+#==============================================================================
+PSURF    Surface pressure               0.000E+00  1    10001 1.000E+00 hPa
+#==============================================================================
+# ND46 diagnostic quantities
+#==============================================================================
+ISOP     ISOP emissions                 1.200E-02  5    21001 1.000E+00 atoms C/cm2/s
+ACET     ACET emissions                 1.200E-02  3    21002 1.000E+00 atoms C/cm2/s
+PRPE     PRPE emissions                 1.200E-02  3    21003 1.000E+00 atoms C/cm2/s
+MONOT    MONOT emissions                1.200E-02 10    21004 1.000E+00 atoms C/cm2/s
+MBO      MBO emissions                  1.200E-02  5    21005 1.000E+00 atoms C/cm2/s
+C2H4     C2H4 emissions                 1.200E-02  2    21006 1.000E+00 atoms C/cm2/s
+#==============================================================================
+# ND68 diagnostic quantities
+#==============================================================================
+BXHEIGHT Grid box height                0.000E+00  1    24001 1.000E+00 m
+AD       Air mass in grid box           0.000E+00  1    24002 1.000E+00 kg
+AVGW     Mixing ratio of H2O vapor      0.000E+00  1    24003 1.000E+00 v/v
+N(AIR)   Number density of air          0.000E+00  1    24004 1.000E+00 molec/m3
+CO2ff    Adj of emission scaling factor 0.000E+00  1    91001 1.000E+00 J
+CO2ocn   Adj of emission scaling factor 0.000E+00  1    91002 1.000E+00 J
+CO2bal   Adj of emission scaling factor 0.000E+00  1    91003 1.000E+00 J
+CO2bb    Adj of emission scaling factor 0.000E+00  1    91004 1.000E+00 J
+CO2bf    Adj of emission scaling factor 0.000E+00  1    91005 1.000E+00 J
+CO2shp   Adj of emission scaling factor 0.000E+00  1    91006 1.000E+00 J
+CO2pln   Adj of emission scaling factor 0.000E+00  1    91007 1.000E+00 J
+CO2che   Adj of emission scaling factor 0.000E+00  1    91008 1.000E+00 J
+CO2sur   Adj of emission scaling factor 0.000E+00  1    91009 1.000E+00 J
+CO2ff    emission scaling factors       0.000E+00  1    94001 1.000E+00 none
+CO2ocn   emission scaling factors       0.000E+00  1    94002 1.000E+00 none
+CO2bal   emission scaling factors       0.000E+00  1    94003 1.000E+00 none
+CO2bb    emission scaling factors       0.000E+00  1    94004 1.000E+00 none
+CO2bf    emission scaling factors       0.000E+00  1    94005 1.000E+00 none
+CO2shp   emission scaling factors       0.000E+00  1    94006 1.000E+00 none
+CO2pln   emission scaling factors       0.000E+00  1    94007 1.000E+00 none
+CO2che   emission scaling factors       0.000E+00  1    94008 1.000E+00 none
+CO2sur   emission scaling factors       0.000E+00  1    94009 1.000E+00 none

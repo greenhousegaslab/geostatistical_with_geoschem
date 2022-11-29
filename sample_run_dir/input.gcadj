@@ -1,0 +1,151 @@
+GEOS-CHEM ADJOINT SIMULATION v35j
+-------------------------------+-----------------------------------------------
+%%% ADJOINT SIMULATION MENU %%%           
+Do adjoint run    LADJ         : T
+Selecet one simulation type    :---
+Inverse problem   L4DVAR       : T
+Kalman filter     L3DVAR       : F
+Sensitivity       LSENS        : F
+ => spot finite diff  FD_SPOT  : F
+ => global finite diff FD_GLOB : F
+-------------------------------+-----------------------------------------------
+%%% FORWARD MODEL OPTIONS %%%           
+adjoint chemistry LADJ_CHEM    : F
+aerosol thermo    LAERO_THEM   : F
+ => ISORROPIAII                : F
+-------------------------------+-----------------------------------------------
+%%% ADJOINT MODEL OPTIONS %%%           
+Include a priori term APSRC    : F
+ => offdiagonal                : F
+Compute DFP inverse Hessian    : F
+Compute BFGS inverse Hessian   : F
+Include rxn rate sensitivities : F
+Delete chk files LDEL_CHKPT    : F
+Scale up and FILL adj transport: F
+-------------------------------+-----------------------------------------------
+%%% DIRECTORIES %%%
+Optimization output            : OptData/
+Temporary adjoint dir adjtmp   : adjtmp/
+Diagnostics ouptut             : diagadj/
+-------------------------------------------------------------------------------
+%%% CONTROL VARIABLE MENU %%%
+Initial conditions LICS        : F
+... OR emissions   LADJ_EMS    : T
+ => strat prod/loss LADJ_STRAT : F
+ => reaction rates LADJ_RRATE  : F
+>------------------------------<
+          FOR LICS             :  
+NSOPT: number of tracers opt   : 1
+  => opt these tracers------>  : TRC# trc_name SF_DEFAULT REG_PARAM ERROR
+Tracer  #1                     : 1    CO2      1          1         1
+>------------------------------<
+          FOR LADJ_EMS         :
+NNEMS: ems groups implemented  : 9
+Emission entries ------------> : EMS# ems_name       opt  SF_DEFAULT REG_PARAM ERROR CORR_LX CORR_LY
+Emission #1                    : 1    IDADJ_ECO2ff   F    1          1         1     100     100
+Emission #2                    : 2    IDADJ_ECO2ocn  F    1          1         1     100     100
+Emission #3                    : 3    IDADJ_ECO2bal  T    1          1         1     100     100
+Emission #4                    : 4    IDADJ_ECO2bb   F    1          1         1     100     100
+Emission #5                    : 5    IDADJ_ECO2bf   F    1          1         1     100     100
+Emission #7                    : 6    IDADJ_ECO2shp  F    1          1         1     100     100
+Emission #8                    : 7    IDADJ_ECO2pln  F    1          1         1     100     100
+Emission #9                    : 8    IDADJ_ECO2che  F    1          1         1     100     100
+Emission #10                   : 9    IDADJ_ECO2sur  F    1          1         1     100     100
+Number emis time group MMSCL   : 365
+>------------------------------<
+        FOR LADJ_STRAT         :
+NSTPL: strat prod & loss trcs  : 0
+Read reactions from STR_ID file: T
+Strat prod & loss trc entries  : ID# trc_name    opt   SF_DEFALUT  REG_PARAM ERROR
+>------------------------------<
+         FOR LADJ_RRATE        :
+NRRATES: num of rxn rates      : 0
+Read reactions from RXN_ID file: T
+ ...or use these Rxn rates     : ID#   rxn_name  opt SF_DEFAULT REG_PARAM ERROR
+-------------------------------------------------------------------------------
+%%% OBSERVATION MENU %%%
+%%%  for PSUEDO_OBS  %%%
+%%%   or LSENSE      %%%
+Observation frequency OBS_FREQ : 60
+Limit number of observations?  : F
+  =>  Forcing time till        : 20050701 050000
+COST FUNCTION options for LSENS:---
+  =>  tracer kg/box            : F
+  =>  tracer ug/m3             : F
+  =>  tracer ppb               : F
+  =>  tracer ppm free trop     : T
+  =>  species ppb w/averaging  : F
+  =>  tracer ug/m3 pop weight  : F
+  =>  tracer ug/m2/hr          : F
+  =>  deposition based?        : F
+      =>  dry dep (not kpp)    : F
+      =>  dry dep (kpp)        : F
+      =>  tracer wet LS dep    : F
+      =>  tracer wet CV dep    : F
+      =>  molec/cm2/s          : F
+      =>  kgN/ha/yr            : F
+      =>  eq/ha/yr             : F
+      =>  kg/s                 : F
+  =>  Regional mask?           : F
+      =>  binary punch file?   : F
+         =>  bpch mask name    : usa_mask.geos.4x5
+      OR  netcdf file      ?   : F
+         =>  nc mask file name : /home/hyungmin/Class_1/Class1.nc
+         =>  nc mask var  name : NPS_16
+>------------------------------<
+NOBS: number of tracers to obs : 1
+  => obs these tracers------>  : TRC# tracer_name
+Tracer  #1                     : 1    CO2
+>------------------------------<
+NOBS_CSPEC: # of species to obs: 0
+  => obs these species------>  : species_name
+Species #1                     : O3
+-------------------------------------------------------------------------------
+%%% FINITE DIFFERENCE MENU %%%
+fd perturbation        FD_DIFF : 0.1
+Numerator of derivative to test:---
+ => longitude degree   LONFD   : 32
+ => latitude  degree   LATFD   : 21
+ => OR pick box by grid index? : T
+   => longidute index  IFD     : 41
+   => latitude index   JFD     : 32
+ => altidude index     LFD     : 1
+ => tracer (STT #)     NFD     : 1
+Denomenator of deriv.   to test:
+ => w/LEMS: emis group MFD     : 1
+ => w/LEMS: sector     EMSFD   : 1
+ => w/LICS: tracer     ICSFD   : 1
+ => w/LSTR: tracer     STRFD   : 1
+ => w/LRRATE: rate     RATFD   : 1
+-------------------------------------------------------------------------------
+%%% DIAGNOSTICS MENU %%%
+General                        : T
+ => print debug  LPRINTFD      : F
+ => jsave, jsave2              : F
+ => adjoint traj LADJ_TRAJ     : F
+   => w.r.t. scale factors?    : F
+ => save iteration diags LITR  : T
+ => sense w.r.t absolute emis  : F
+CO satellite diganostics       : F
+ => H(model)                   : F
+ => h(obs)                     : F
+ => H(model)-h(obs)            : F
+ => adjoint forcing            : F
+ => model bias                 : F
+ => observation count          : F
+ => DOFs                       : F
+TES NH3 diagnostics            :---
+ => BLVMR                      : F
+HDF diagnostics                :---
+ => Level 2                    : F
+ => Level 3                    : F
+-------------------------------------------------------------------------------
+%%% CRITICAL LOAD MENU %%%
+Critical Load obs              : F
+ => N deposition               : F
+ => Acidity deposition         : F
+Critical Load file             : Exceedence.nc      
+GEOS-Chem file                 : Annual_Deposition.nc
+-------------------------------------------------------------------------------
+END OF FILE                    :
+-------------------------------+-----------------------------------------------
