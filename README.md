@@ -1,4 +1,7 @@
 # geostatistical_with_geoschem
+
+Code written by Ruixue Lei and Scot M. Miller
+
 Run a geostatistical inverse model for CO2 using the GEOS-Chem adjoint model.
 
 You need to compile fortran code and prepare .m files to run GEOS-Chem adjoint model.
