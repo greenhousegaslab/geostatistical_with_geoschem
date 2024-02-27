@@ -3,6 +3,10 @@ function [x,fval,exitflag,output,grad]=fminlbfgs_restart(funfcn,x_init,optim)
 %   This optimizer is developed for image registration methods with large 
 %	amounts of unknown variables.
 %   From S. Miller: I have modified this code to better facilitate restarting existing runs.
+%       If you set the restart option to true (see below), then the function will read in an existing
+%       L-BFGS run from the current directory and will resume that run. Also note that this version
+%       of the code will save the outputs at every iteration (in the current directory), so that it's
+%       easy to restart a run that was cut short (e.g., due to run time limits).
 %
 %   Optimization methods supported:
 %	- Quasi Newton BroydenñFletcherñGoldfarbñShanno (BFGS)  
@@ -28,6 +32,8 @@ function [x,fval,exitflag,output,grad]=fminlbfgs_restart(funfcn,x_init,optim)
 %
 %   Extended description of input/ouput variables 
 %   OPTIONS,
+%               OPTIONS.restart : If true, read in an existing, partially-completed
+% 			L-BFGS run from the current directory and resume that run.
 %		OPTIONS.GoalsExactAchieve : If set to 0, a line search method is
 %               used which uses a few function calls to do a good line
 %               search. When set to 1 a normal line search method with Wolfe 
