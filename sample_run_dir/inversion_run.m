@@ -464,7 +464,12 @@
         % Create an empty flux estimate
         shat = [];
 
-        options = struct('HessUpdate','lbfgs','GradObj','on','Display','iter','MaxIter',maxit,'GradConstr',false,'restart',false);
+        if restartrun == 0; 
+		options = struct('HessUpdate','lbfgs','GradObj','on','Display','iter','MaxIter',maxit,'GradConstr',false,'restart',false);
+	end;
+ 	if restartrun == 1;
+		options = struct('HessUpdate','lbfgs','GradObj','on','Display','iter','MaxIter',maxit,'GradConstr',false,'restart',true);
+  	end;
 
         [shat,costfun,exitflag,gradient] = fminlbfgs(f1,shat0,options);
 
