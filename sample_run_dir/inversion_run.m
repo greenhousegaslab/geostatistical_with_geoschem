@@ -37,7 +37,6 @@
 
 	% Create a path that contains other temporary inputs and outputs.
 	% These include deltamat, which lists the distance in km among different GEOS-Chem model grid boxes.
-	% Also, a counter gets saved there that keeps track of the number of iterations.	
 	% This folder should contain the prior fluxes (in this case from ORCHIDEE, GFED, Ocean fluxes, and ODIAC.)
 	% Lastly, the land mask is saved there.
         inpath = '/scratch4/smill191/smiller/data/OCO2_MIP/misc_inputs/';
