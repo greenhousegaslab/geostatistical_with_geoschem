@@ -347,11 +347,6 @@
         shat0 = NEE + odiac + gfed; %  + ocean;
 	shat0 = shat0(landall);
 
-        % Create an iteration counter
-        count=0;
-        save(strcat(fluxpath,'count.mat'),'count');
-        clear count;
-
         end;
 
         %-------------------------------------------------%
@@ -367,9 +362,11 @@
         disp('This run is the restart of an existing run.');
         disp('Reading in existing flux estimate as the initial flux estimate.');
 
-        load(strcat(fluxpath,'count.mat'),'count');
-        load(strcat(fluxpath,'shat_',num2str(count),'.mat'),'shat_backtransform');
-        shat0 = shat_backtransform;
+	% Read in the data.mat file and pull out the outputs from the previous iteration of L-BFGS
+
+        % load(strcat(fluxpath,'count.mat'),'count');
+        % load(strcat(fluxpath,'shat_',num2str(count),'.mat'),'shat_backtransform');
+        % shat0 = shat_backtransform;
 
         disp('Existing value of the iteration counter:');
         disp(num2str(count));
@@ -377,8 +374,8 @@
         % cost_gradient_fun.m will +1 to count at the beginning of the script. 
         % Here, I subtract 1 from count so that we start cost_gradient_fun.m
         % on the same counter where we left off at the end of the last run.
-        count = count -  1;
-        save(strcat(fluxpath,'count.mat'),'count');
+        % count = count -  1;
+        % save(strcat(fluxpath,'count.mat'),'count');
 
         end;
 
