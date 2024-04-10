@@ -27,11 +27,11 @@ function [ f,g ] = cost_gradient_fun( X, A, B, Einv, Dinv, Dinv1, CD, CE, shat, 
 
 	disp('Calculate the cost and (possibly) gradient functions');
 
-	% Read in the counter and advance it by 1
-	load(strcat(fluxpath,'count.mat'),'count');
-	count = count +  1;
-	save(strcat(fluxpath,'count.mat'),'count');
-
+	% Read in the iteration counter
+	load(strcat(geosdir,'data.mat'));
+	count = data.iteration;
+	clear data;
+ 
 	% Set a timer to determine how long each iteration takes
 	tic;
 	
