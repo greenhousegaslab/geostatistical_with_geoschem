@@ -78,14 +78,14 @@
 %----------------------------------------------------------------%
 
         % If this run is the continuation of an existing run, there will be a 
-        % file in fluxdir called "count.mat" that contains the iteration counter
-        % from the previous run. 
+        % file in fluxdir called "data.mat" that contains the output of the L-BFGS
+	% algorithm.
 
         % If that file exists, we'll assume that this inversion run is the continuation
         % of a previous run and will use the last available iteration as the initial guess
         % in this launch of L-BFGS.
         restartrun = 0;
-        if exist(strcat(fluxpath,'count.mat')) == 2;
+        if exist(strcat(fluxpath,'data.mat')) == 2;
                 restartrun = 1;
         end;
 
