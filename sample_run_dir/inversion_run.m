@@ -348,30 +348,6 @@
 
         end;
 
-        %-------------------------------------------------%
-        % Read in existing flux estimate (if available)   %
-        %-------------------------------------------------%
-
-        % If this run is the restart of an existing run, we'll use the existing flux estimate
-        % from the last run as the initial guess of the fluxes.
-        % We'll also re-start the counter where we left off (instead of starting it at 0).
-
-        if restartrun == 1;
-
-        disp('This run is the restart of an existing run.');
-        disp('Reading in existing flux estimate as the initial flux estimate.');
-
-	% Read in the data.mat file and pull out the outputs from the previous iteration of L-BFGS
-	load(strcat(geosdir,'data.mat'));
-        count = data.iteration;
-	clear data;
-
-        disp('Existing value of the iteration counter:');
-        disp(num2str(count));
-	
-        end;
-
-
 %-------------------------------------------------%
 % Pre-calculate matrix products where possible    %
 %-------------------------------------------------%
