@@ -363,20 +363,12 @@
 
 	% Read in the data.mat file and pull out the outputs from the previous iteration of L-BFGS
 	load(strcat(geosdir,'data.mat'));
-        count = data.iter
-        % load(strcat(fluxpath,'count.mat'),'count');
-        % load(strcat(fluxpath,'shat_',num2str(count),'.mat'),'shat_backtransform');
-        % shat0 = shat_backtransform;
+        count = data.iteration;
+	clear data;
 
         disp('Existing value of the iteration counter:');
         disp(num2str(count));
-
-        % cost_gradient_fun.m will +1 to count at the beginning of the script. 
-        % Here, I subtract 1 from count so that we start cost_gradient_fun.m
-        % on the same counter where we left off at the end of the last run.
-        % count = count -  1;
-        % save(strcat(fluxpath,'count.mat'),'count');
-
+	
         end;
 
 
