@@ -463,12 +463,14 @@
 
         if restartrun == 0; 
 		options = struct('HessUpdate','lbfgs','GradObj','on','Display','iter','MaxIter',maxit,'GradConstr',false,'restart',false);
+                [shat,costfun,exitflag,gradient] = fminlbfgs(f1,shat0,options);
 	end;
  	if restartrun == 1;
+                % If this run is a restart run, then the intial guess doesn't matter. L-BFGS will grab all needed inputs from data.mat
 		options = struct('HessUpdate','lbfgs','GradObj','on','Display','iter','MaxIter',maxit,'GradConstr',false,'restart',true);
+                [shat,costfun,exitflag,gradient] = fminlbfgs(f1,ones(m,1),options);
   	end;
 
-        [shat,costfun,exitflag,gradient] = fminlbfgs(f1,shat0,options);
 
 %-----------------------------------------------%
 % Transform fluxes back to normal space         %
