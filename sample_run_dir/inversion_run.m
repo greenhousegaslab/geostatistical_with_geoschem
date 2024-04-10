@@ -84,7 +84,7 @@
         % of a previous run and will use the last available iteration as the initial guess
         % in this launch of L-BFGS.
         restartrun = 0;
-        if exist(strcat(fluxpath,'data.mat')) == 2;
+        if exist(strcat(geosdir,'data.mat')) == 2;
                 restartrun = 1;
         end;
 
@@ -362,7 +362,8 @@
         disp('Reading in existing flux estimate as the initial flux estimate.');
 
 	% Read in the data.mat file and pull out the outputs from the previous iteration of L-BFGS
-
+	load(strcat(geosdir,'data.mat'));
+        count = data.iter
         % load(strcat(fluxpath,'count.mat'),'count');
         % load(strcat(fluxpath,'shat_',num2str(count),'.mat'),'shat_backtransform');
         % shat0 = shat_backtransform;
