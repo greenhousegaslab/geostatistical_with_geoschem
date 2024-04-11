@@ -28,9 +28,15 @@ function [ f,g ] = cost_gradient_fun( X, A, B, Einv, Dinv, Dinv1, CD, CE, shat, 
 	disp('Calculate the cost and (possibly) gradient functions');
 
 	% Read in the iteration counter
-	load(strcat(geosdir,'data.mat'));
-	count = data.iteration;
-	clear data;
+ 	% data.mat has the outputs of the last iteration.
+        % Hence, we'll increase the iteration counter by 1
+        if exist(strcat(geosdir,'data.mat')) == 2;
+		load(strcat(geosdir,'data.mat'));
+		count = data.iteration + 1;
+		clear data;
+  	else:
+   		count = 1;
+     	end;
  
 	% Set a timer to determine how long each iteration takes
 	tic;
