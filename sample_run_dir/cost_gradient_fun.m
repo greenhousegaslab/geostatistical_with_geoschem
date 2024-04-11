@@ -198,9 +198,12 @@ function [ f,g ] = cost_gradient_fun( X, A, B, Einv, Dinv, Dinv1, CD, CE, shat, 
 
 	%% Step 2. run the GC forward and GC adjoint model, to get Hs and the gradient
 
-	% Delete the file residuals.csv from the GEOS-Chem run directory.
-	% GEOS-Chem will write a new file with residuals for the current flux estimate
-	% (instead of appending to the existing residuals.csv file)
+	% GEOS-Chem writes files with model data residuals. The code here will move and rename those
+ 	% files from the prevoius GEOS-Chem run.
+	% Note: the next GEOS-Chem run will append model-data residuals to any existing model-data residual files.
+        % Hence we need to move any existing files out of the way, so the new GEOS-Chem run will start writing a 
+	% new residual file (instead of appending to the previous run).
+ 	% Note: the methane model outputs the residuals in a file calld diff.CH4.01.m.
 	if count > 1; 
 		unix(['mv ',geosdir,'residuals_oco2.csv ',geosdir,'residuals_oco2',num2str(count-1),'.csv']); 
                 unix(['mv ',geosdir,'residuals_insitu.csv ',geosdir,'residuals_insitu',num2str(count-1),'.csv']); 
