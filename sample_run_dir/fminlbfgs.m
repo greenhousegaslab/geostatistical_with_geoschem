@@ -217,11 +217,6 @@ while(true)
     % Update number of itterations
     data.iteration=data.iteration+1; 
 
-%    % Note: the code here has been added by Scot Miller
-%    % Write the current guess for the fluxes to file
-%    shat = data.xInitial;
-%    save(strcat(outpath,'shat_',num2str(data.iteration),'.mat'),'shat');
-
     % Set current lineSearch parameters
     data.TolFunLnS = eps(max(1,abs(data.fInitial )));
     data.fminimum = data.fInitial - 1e16*(1+abs(data.fInitial));
