@@ -7,7 +7,13 @@ function [x,fval,exitflag,output,grad]=fminlbfgs(funfcn,x_init,optim)
 %       L-BFGS run from the current directory and will resume that run. Also note that this version
 %       of the code will save the outputs at every iteration (in the current directory), so that it's
 %       easy to restart a run that was cut short (e.g., due to run time limits).
-%
+%   From Ao Chen: I added the code to save data.mat after each run of GEOS-Chem. As a result, 
+%       if the number of warm-ups required for a run exceeds the time limit of Rockfish (or any other 
+%       supercomputer), the save option will still work properly.
+%   From Ao Chen: fminlbfgs and fminunc work similarly. But I do not know
+%       how to save data.mat in fminunc. If we can find out how to save
+%       data.mat, we'd better to use fminunc since it is a built-in function
+%       and the author of fminlbfgs thinks it is robust.
 %   Optimization methods supported:
 %	- Quasi Newton BroydenñFletcherñGoldfarbñShanno (BFGS)  
 %   - Limited memory BFGS (L-BFGS)
@@ -178,6 +184,7 @@ end
 % Calculate the initial error and gradient
 data.initialStepLength=1;
 [data,fval,grad]=gradient_function(data.xInitial,funfcn, data, optim);
+disp("initial gc run 1");save('./data.mat','data');%ao add "save" here
 data.gradient=grad;
 data.dir = -data.gradient;
 data.fInitial = fval;
@@ -558,6 +565,7 @@ while(true)
     % Calculate value (and gradient if no extra time cost) of current alpha
     if(~optim.GradConstr)
         [data,f_alpha, grad]=gradient_function(data.xInitial(:)+alpha*data.dir(:),funfcn, data, optim);
+        disp("sectionPhase gc run 2");save('./data.mat','data');%ao add "save" here
         fPrime_alpha = grad'*data.dir(:);
     else
         gstep=data.initialStepLength/1e6; 
@@ -647,6 +655,7 @@ while(true)
   % Calculate value (and gradient if no extra time cost) of current alpha
   if(~optim.GradConstr)
       [data,f_alpha, grad]=gradient_function(data.xInitial(:)+alpha*data.dir(:),funfcn, data, optim);
+      disp("bracketingPhase gc run 3");save('./data.mat','data');%ao add "save" here
       fPrime_alpha = grad'*data.dir(:);
   else
       gstep=data.initialStepLength/1e6;
