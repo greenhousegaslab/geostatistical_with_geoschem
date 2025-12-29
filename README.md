@@ -11,7 +11,9 @@ Run the chmod command to give run permission for two scripts. Then run those scr
 compile_adjoint.sh will report an error of missing some libraries, but the "mx" script will fix it and generate "geos". Move "geos" to your geoschem run directory.
 
 chmod +x compile_adjoint.sh mx
+
 ./compile_adjoint.sh
+
 ./mx
 
 As for .m files, they can be run by Matlab or Octave.
