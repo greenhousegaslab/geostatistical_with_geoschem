@@ -51,7 +51,6 @@ Emission #7                    : 6    IDADJ_ECO2shp  F    1          1         1
 Emission #8                    : 7    IDADJ_ECO2pln  F    1          1         1     100     100
 Emission #9                    : 8    IDADJ_ECO2che  F    1          1         1     100     100
 Emission #10                   : 9    IDADJ_ECO2sur  F    1          1         1     100     100
-Number emis time group MMSCL   : 365
 >------------------------------<
         FOR LADJ_STRAT         :
 NSTPL: strat prod & loss trcs  : 0

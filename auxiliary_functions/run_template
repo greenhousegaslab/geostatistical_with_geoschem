@@ -1,0 +1,21 @@
+#SBATCH --partition shared
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=1
+#SBATCH --ntasks=1
+#SBATCH --mem=8000
+#SBATCH --time=4:00:00
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------------#
+# GEOS-Chem run script																	#
+# NOTES: This script is a simplified version of the adjoint run script. Notably, I assume that you've compiled GEOS-Chem with the correct options	#
+# 	and moved it to the run directory before executing this run script. Also, I run a single iteration of the adjoint and then read the results	#
+# 	into the Matlab code for the inverse model (i.e., the iteration number is never greater than 1).						#
+#																			#
+#-------------------------------------------------------------------------------------------------------------------------------------------------------#
+
+#-------------------------------#
+# Move into the run directory   #
+#-------------------------------#
+
+        # Directory in the package where the executable runs
+

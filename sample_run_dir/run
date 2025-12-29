@@ -1,21 +1,30 @@
 #!/bin/bash
-#SBATCH --job-name=oco2_inversion
-#SBATCH --partition defq
+#SBATCH --job-name=IS_2016
+#SBATCH --partition shared
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=1
 #SBATCH --ntasks=1
-#SBATCH --mem=20000
-#SBATCH --time=48:00:00
-##SBATCH --mail-user=smill191@jhu.edu
+#SBATCH --mem=8000
+#SBATCH --time=4:00:00
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------------#
 # GEOS-Chem run script																	#
 # NOTES: This script is a simplified version of the adjoint run script. Notably, I assume that you've compiled GEOS-Chem with the correct options	#
 # 	and moved it to the run directory before executing this run script. Also, I run a single iteration of the adjoint and then read the results	#
 # 	into the Matlab code for the inverse model (i.e., the iteration number is never greater than 1).						#
-# S. Miller, 11/29/2021																	#
 #																			#
 #-------------------------------------------------------------------------------------------------------------------------------------------------------#
+
+#-------------------------------#
+# Move into the run directory   #
+#-------------------------------#
+
+        # Directory in the package where the executable runs
+        DRUNDIR=IS_2016
+        # Directory where run packages are unpacked and run
+        DRUN=/scratch4/smill191/kmorgan/OCO2_MIP_v11/IS
+
+        cd $DRUN/$DRUNDIR
 
 #--------------------------------#
 # Change machine memory limits   #
@@ -51,37 +60,15 @@
         export GC_BIN="$ROOT_LIBRARY_DIR/bin"
         export LD_LIBRARY_PATH=$ROOT_LIBRARY_DIR/lib:$ROOT_LIBRARY_DIRF/lib:$ROOT_LIBRARY_HDF5/lib:$LD_LIBRARY_PATH
 
-#-------------------------------#
-# Move into the run directory   #
-#-------------------------------#
-
-	# Directory in the package where the executable runs
-	DRUNDIR=LNLG_2021
-	# Directory where run packages are unpacked and run
-        DRUN=/scratch4/smill191/smiller/geoschem_adjoint_co2
-
-        cd $DRUN/$DRUNDIR
-
 #----------------------------------------------------------------------------------------#
 # Clean out old files (e.g., old forward model output, old checkpointing files, etc.)    #
 #----------------------------------------------------------------------------------------#
 
         echo ' run: Removing old files'
-        echo '  - checking for old core files'
-        ls core.*
-        if [ $? -eq 0 ]; then
-           echo '  - removing old core files'
-           rm -v core.*
-        fi
-        if [ -f ctm.bpch ]; then
-           rm -v ctm.bpch
-        fi
-        echo '  - checking for *.chk.* file '
-        ls adjtmp/*.chk.*
-        if [ $? -eq 0 ]; then
-           echo '  - removing old *.chk.* file '
-           rm -v adjtmp/*.chk.*
-        fi
+
+        rm core.*
+	rm ctm.bpch
+	rm adjtmp/*.chk.*
 
 #-----------------------------#
 # Define the iteation number  #
@@ -128,4 +115,15 @@ elif [ "$XGOOD" -eq 1 ]; then
       echo "     N O T    F I N I S H .                      "
       echo " ------------------------------------------------"
 fi
+
+#----------------------------------------------------------------------------------------#
+# Clean out temporary files after the run has finished
+#----------------------------------------------------------------------------------------#
+
+        echo ' run: Removing old files'
+        echo '  - checking for old core files'
+
+	rm core.*
+        rm ctm.bpch
+        rm adjtmp/*.chk.*
 

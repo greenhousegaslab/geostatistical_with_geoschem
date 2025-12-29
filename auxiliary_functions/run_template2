@@ -1,0 +1,103 @@
+        cd $DRUNDIR
+
+#--------------------------------#
+# Change machine memory limits   #
+#--------------------------------#
+
+# # Max out machine limits
+        ulimit -t unlimited              # cputime
+        ulimit -f unlimited              # filesize
+        ulimit -d unlimited              # datasize
+        ulimit -s unlimited              # stacksize
+        ulimit -c unlimited              # coredumpsize
+        ulimit -m unlimited              # memoryuse
+        ulimit -v unlimited              # vmemoryuse
+        ulimit -n unlimited              # descriptors
+        ulimit -l unlimited              # memorylocked
+        ulimit -u unlimited              # maxproc
+
+        # Reset the child stack size to a large positive number
+        # (It's OK if this is larger than the max value, it's just a kludge)
+        export KMP_STACKSIZE=500000000
+
+#--------------------------------------------------#
+# Load required software modules for GEOS-Chem     #
+#--------------------------------------------------#
+
+        ml intel/2022.0
+        export ROOT_LIBRARY_DIR="/data/apps/linux-centos8-cascadelake/intel-19.1.2.254/netcdf-c-4.7.4-6y6obikbrvgtborvgu4fiqeakyqdbvlr"
+        export ROOT_LIBRARY_DIRF="/data/apps/linux-centos8-cascadelake/intel-19.1.2.254/netcdf-fortran-4.5.3-ao6brusl3l7xopfg27667ihk4mcseg5n"
+        export ROOT_LIBRARY_HDF5="/data/apps/linux-centos8-cascadelake/intel-19.1.2.254/hdf5-1.10.7-mscsqqv4iu6wc7ax75wkassr37dxzrlf"
+        export GC_INCLUDE="$ROOT_LIBRARY_DIR/include"
+        export GC_F_INCLUDE="$ROOT_LIBRARY_DIRF/include"
+        export GC_F_BIN="$ROOT_LIBRARY_DIRF/bin"
+        export GC_BIN="$ROOT_LIBRARY_DIR/bin"
+        export LD_LIBRARY_PATH=$ROOT_LIBRARY_DIR/lib:$ROOT_LIBRARY_DIRF/lib:$ROOT_LIBRARY_HDF5/lib:$LD_LIBRARY_PATH
+
+#----------------------------------------------------------------------------------------#
+# Clean out old files (e.g., old forward model output, old checkpointing files, etc.)    #
+#----------------------------------------------------------------------------------------#
+
+        echo ' run: Removing old files'
+
+        rm core.*
+	rm ctm.bpch
+	rm adjtmp/*.chk.*
+
+#-----------------------------#
+# Define the iteation number  #
+#-----------------------------#
+
+	# Set the start (or current ) iteration number
+	X=1
+	# Set the stopping iteration number
+	XSTOP=1
+        echo "          $X" > ITER
+        echo "          $XSTOP" >> ITER
+        echo "ITER file updated"
+
+#-------------------------------#
+# Run the GEOS-Chem executable  #
+#-------------------------------#
+
+./geos
+
+#-------------------------------------------#
+# Check whether the run finished properly   #
+#-------------------------------------------#
+
+       # A succesful run will generate a gctm.gdt.* file. 
+          echo ' run: checking if finished iteration ' $X 
+          if [ -f OptData/gctm.gdt.0${X}.nc4 ]; then
+             echo '  - found ' gctm.gdt.0$X.nc4
+             XGOOD=0
+          else
+             echo '  - did not find ' gctm.gdt.0$X.nc4 
+             XGOOD=1
+             X=$XSTOP
+          fi
+
+if   [ "$XGOOD" -eq 0 ]; then
+      echo " ------------------------------------------------"
+      echo " G E O S   C H E M   A D J O I N T   E X I T E D "
+      echo "            N O R M A L L Y                      "
+      echo " ------------------------------------------------"
+elif [ "$XGOOD" -eq 1 ]; then
+      echo " ------------------------------------------------"
+      echo "     *  * *   E R R O R   * * *                  "
+      echo " G E O S   C H E M   A D J O I N T   D I D       "
+      echo "     N O T    F I N I S H .                      "
+      echo " ------------------------------------------------"
+fi
+
+#----------------------------------------------------------------------------------------#
+# Clean out temporary files after the run has finished
+#----------------------------------------------------------------------------------------#
+
+        echo ' run: Removing old files'
+        echo '  - checking for old core files'
+
+	rm core.*
+        rm ctm.bpch
+        rm adjtmp/*.chk.*
+
